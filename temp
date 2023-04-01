@@ -1,0 +1,33 @@
+/*Create a method which accepts temperature in Celsius and return its Fahrenheit equivalent.
+Create another method which accepts temperature in Fahrenheit and return its Celsius
+equivalent. Also create a method to invoke the above methods.
+double F=9*C/5+32;
+double C=(F-32)*5/9;*/
+import java.util.*;
+class temp
+{
+    float c , f , nc , nf ;
+    Scanner sc=new Scanner (System.in);
+    public float ctof()
+    {
+        System.out.println("Enter the temperature in celsius : ");
+        c=sc.nextFloat();
+        f=9*c/5+32;
+        System.out.println("The converted temperature is : " + f);
+        return f ;
+    }
+    public float ftoc()
+    {
+        System.out.println("Enter the temperature in farenheit : ");
+        f=sc.nextFloat();
+        c=(f-32)*5/9;
+        System.out.println("The converted temperature is : " + c);
+        return c ;
+    }
+    public static void main(String args[])
+    {
+        temp obj = new temp();
+        obj.ctof();
+        obj.ftoc();
+    }
+}
