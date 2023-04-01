@@ -1,0 +1,27 @@
+
+/*A special two-digit number is such that when the sum of its digits is added to the product of
+its digits, the result is equal to the original two-digit number.*/
+import java.util.*;
+class special
+{
+    public static void main(String  args [])
+    {
+        int a , b , n , s , p , ts ;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number : ");
+        n=sc.nextInt();
+        a=n/10;
+        b=n%10;
+        s=a+b;
+        p=a*b;
+        ts=s+p;
+        if(n==ts)
+        {
+            System.out.println("It is a special two-digit number ");
+        }
+        else
+        {
+            System.out.println("It is not a special two-digit number ");
+        }
+    }
+}
