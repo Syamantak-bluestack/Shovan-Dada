@@ -1,0 +1,55 @@
+/*Define a class hotel in with the following description
+Instance variables/data members:
+Rno : Room No of int type
+Name : Customer name of String type
+Tarrif : stores per day charges of float type
+NOD : no of days integer
+
+Member Methods:
+CALC() : to calculate and return Amount as NOD*Tarrif and if the value of NOD*Tarrif
+
+is more than 10000 then as 1.05*NOD*Tarrif
+Checkin() : to enter the Rno, Name, Tarrif and NOD
+Checkout() : to display Rno, Name, Tarri
+Checkout() : to display Rno, Name, Tarrif, NOD and Amount by calling CALC()
+Write the main method to create an object of the class and call the above member methods.*/
+import java.util.Scanner;
+class hotel
+{
+    int Rno , NOD ;
+    String name;
+    float tariff  ;
+    public  void checkin()
+    {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("Enter your Name , Room no. ,  Number of Days , Tariff : ");
+        name=sc.nextLine();
+        Rno=sc.nextInt();
+        NOD = sc.nextInt();
+        tariff = sc.nextFloat();
+    }
+    public float calc ()
+    {
+        float amount;
+        amount= NOD * tariff;
+        if(amount>10000)
+        {
+            amount=1.05f*amount;
+        }
+        return amount ; 
+    }
+    public void checkout()
+    {
+        System.out.println("Name : " + name);
+        System.out.println("Room no  : " + Rno);
+        System.out.println("Number of Days : " + NOD);
+        System.out.println("Amount : " + calc());
+    }
+    public static void main(String [] args )
+    {
+        hotel obj = new hotel();
+        obj.checkin();
+        obj.calc();
+        obj.checkout();
+    }
+}
