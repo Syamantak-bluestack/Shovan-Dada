@@ -1,0 +1,15 @@
+/*A shopkeeper offers 10% discount on the printed price of a mobile phone. However, a customer has to pay 9% GST on the remaining amount. Write a program in Java to calculate the amount to be paid by the customer taking printed price as an input.*/
+import java.util.*;
+class customer
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double price , dprice , tprice;
+        System.out.println("Enter the price : ");
+        price=sc.nextDouble();
+        dprice=price-((10*price)/100);
+        tprice=dprice+((9*dprice)/100);
+        System.out.println("The total price is : " + tprice);
+    }
+}
