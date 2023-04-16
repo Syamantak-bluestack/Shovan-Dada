@@ -1,0 +1,26 @@
+/*Write a program to enter three sides of a triangle. Check and print whether the triangle is equable or not.
+For example, a right angled triangle with sides 5, 12 and 13 has its area and perimeter both equal to 30.*/
+import java.util.*;
+class equable
+{
+    public static void main(String [] args )
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the three side of the triangle : ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        double peri = a+b+c;
+        double s = peri/2;
+        double ar =( s*(s-a)*(s-b)*(s-c));
+        double tar = Math.sqrt(ar);
+        if(peri==tar)
+        {
+            System.out.println("It is an equable triangle ");
+        }
+        else
+        {
+            System.out.println("It is not an equable triangle ");
+        }
+    }
+}
